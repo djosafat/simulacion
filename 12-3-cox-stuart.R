@@ -12,7 +12,7 @@ m <- length(numeros_aleatorios)
 aux <- 1*(numeros_aleatorios[1:l]<numeros_aleatorios[(1+l):m])
 aux
 empates <- sum((numeros_aleatorios[1:l]==numeros_aleatorios[(1+l):m]))
-n <- m-empates
+n <- l-empates
 TT <- sum(aux)
 aux2 <- dbinom(TT,n,1/2)
 probasbinom <- dbinom(0:n,n,1/2)
@@ -31,12 +31,12 @@ m <- length(muestra)
 aux <- 1*(muestra[1:l]<muestra[(1+l):m])
 aux
 empates <- sum((muestra[1:l]==muestra[(1+l):m]))
-n <- m-empates
+n <- l-empates
 TT <- sum(aux)
 aux2 <- dbinom(TT,n,1/2)
 probasbinom <- dbinom(0:n,n,1/2)
 pvalue <- sum(probasbinom[probasbinom<=aux2])
 pvalue
-# Si pvalue < 0.05 entonces "Se rechaza H0 y por tanto, 
+# Si pvalue > 0.05 entonces "No se rechaza H0 y por tanto, 
 # existe evidencia estadística de tendencia"
 ####
