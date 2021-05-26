@@ -38,5 +38,5 @@ probasbinom <- dbinom(0:n,n,1/2)
 pvalue <- sum(probasbinom[probasbinom<=aux2])
 pvalue
 # Si pvalue > 0.05 entonces "No se rechaza H0 y por tanto, 
-# existe evidencia estadística de tendencia"
+# no existe evidencia estadÃ­stica de tendencia"
 ####
